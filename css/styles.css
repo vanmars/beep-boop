@@ -21,3 +21,7 @@ body {
 #returnHeading {
   display: none;
 }
+
+.welcome {
+  margin-bottom: -50px;
+}
