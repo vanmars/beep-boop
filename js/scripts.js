@@ -2,7 +2,6 @@
 
 function containsThree (number) {
   let stringNumber = number.toString();
-  console.log(stringNumber);
   for (num of stringNumber){
     if (num === "3"){
       return true;
@@ -10,12 +9,9 @@ function containsThree (number) {
   };
   return false;
 };
-console.log("containsThree Test: "+ (containsThree(13))); // true
-console.log("containsThree Test: "+ (containsThree(245))); // false
 
 function containsTwo (number) {
   let stringNumber = number.toString();
-  console.log(stringNumber);
   for (num of stringNumber){
     if (num === "2"){
       return true;
@@ -23,12 +19,9 @@ function containsTwo (number) {
   };
   return false;
 };
-console.log("containsTwo Test: "+ (containsTwo(12))); // true
-console.log("containsTwo Test: "+ (containsTwo(144))); // false
 
 function containsOne (number) {
   let stringNumber = number.toString();
-  console.log(stringNumber);
   for (num of stringNumber){
     if (num === "1"){
       return true;
@@ -36,8 +29,6 @@ function containsOne (number) {
   };
   return false;
 };
-console.log("containsOne Test: "+ (containsOne(531))); // true
-console.log("containsOne Test: "+ (containsOne(533))); // false
 
 
 function beepBoop (number) {
