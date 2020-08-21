@@ -1,5 +1,4 @@
 // Business Logic
-
 function containsThree (number) {
   let stringNumber = number.toString();
   for (num of stringNumber){
@@ -33,14 +32,15 @@ function containsOne (number) {
 function beepBoop (number) {
   let result = [];
   if (isNaN(number)){ 
-    // alert("Please enter a number, and use digits rather than letters.");
-    return "Please enter a number, and use digits rather than letters.";
+    alert("Please enter a number, and use digits rather than letters.");
+    return;
+    // return "Please enter a number, and use digits rather than letters.";
   } else if (containsThree(number)) {
     return "Won't you be my neighbor?";
   } else if (containsTwo(number)) {
-    return "Boop";
+    return "Boop!";
   } else if (containsOne(number)) {
-    return "Beep";
+    return "Beep!";
   } else {
     for (i=0; i<=number; i++){
       result.push(i);
@@ -50,6 +50,19 @@ function beepBoop (number) {
   };
 };
 
+// User Interface Logic
+$(document).ready(function(){
+  $("#numberForm").submit(function(event){
+    event.preventDefault();
+    const numberInput = parseInt($("#number").val());
+    $("#returnPar").append(beepBoop(numberInput)+ "  ");
+  });
+});
+
+
+
+
+/*
 // Tests
   // Test 1 - Check for non-numbers
   console.log("Test 1: " + (beepBoop("thirty") === "Please enter a number, and use digits rather than letters."));
@@ -88,5 +101,4 @@ function beepBoop (number) {
   console.log("Test 6c: " + (beepBoop(13) === "Won't you be my neighbor?"));
   console.log("Expected: Won't you be my neighbor?")
   console.log("Returned: " + (beepBoop(13)));
-
-// User Interface Logic
+*/
