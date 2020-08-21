@@ -77,7 +77,8 @@ $(document).ready(function(){
     const nameInput = $("#name").val();
     const numberInput = Number($("#number").val());
     const orderInput = parseInt($("#numOrder").val());
-    $("#returnHeading").show();
+    
+
     if (orderInput === 1){
       results.push(" ' " + beepBoop(numberInput, nameInput) + " ' ");
       $("#returnPar").text(results);
@@ -85,7 +86,20 @@ $(document).ready(function(){
       results.push(" ' " + beepBoopReverse(numberInput, nameInput) + " ' ");
       $("#returnPar").text(results);
     };
+    
+    $("#returnRow").show();
+
+    $("#btnReset").click(function(event){
+      event.preventDefault();
+      $("form")[0].reset();
+      $("#returnPar").text("");
+      results = [];
+      $("#returnRow").hide();
+    });
+
+
   });
+ 
 });
 
 /*
