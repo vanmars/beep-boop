@@ -53,7 +53,7 @@ function beepBoop (number, name) {
 
 // User Interface Logic
 $(document).ready(function(){
-  $("#numberForm").submit(function(event){
+  $("form").submit(function(event){
     event.preventDefault();
     const nameInput = $("#name").val();
     const numberInput = Number($("#number").val());
