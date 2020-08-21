@@ -76,10 +76,15 @@ $(document).ready(function(){
     event.preventDefault();
 
     // Animation
-    $(".form").animate({marginLeft: "+=5%", marginRight: "+=5%"}, 75);
-    $(".form").animate({marginLeft: "-=5%", marginRight: "-=5%"}, 75);
-    $(".form").animate({marginLeft: "+=5%", marginRight: "+=5%"}, 75);
-    $(".form").animate({marginLeft: "-=5%", marginRight: "-=5%"}, 75);
+    // $(".form").animate({marginLeft: "+=5%", marginRight: "+=5%"}, 100);
+    // $(".form").animate({marginLeft: "-=5%", marginRight: "-=5%"}, 100);
+    // $(".form").animate({marginLeft: "+=5%", marginRight: "+=5%"}, 100);
+    // $(".form").animate({marginLeft: "-=5%", marginRight: "-=5%"}, 100);
+
+    $(".form").animate({marginLeft: "+=5%", marginRight: "-=5%"}, 100);
+    $(".form").animate({marginLeft: "-=5%", marginRight: "+=5%"}, 100);
+    $(".form").animate({marginLeft: "+=5%", marginRight: "-=5%"}, 100);
+    $(".form").animate({marginLeft: "-=5%", marginRight: "+=5%"}, 100);
 
     const nameInput = $("#name").val();
     const numberInput = Number($("#number").val());
@@ -94,15 +99,16 @@ $(document).ready(function(){
       results.push(" ' " + beepBoopReverse(numberInput, nameInput) + " ' ");
       $("#returnPar").text(results);
     };
-    $("#returnRow").show();
+    $("#returnRow").slideDown();
 
     // Reset Button Functionality
     $("#btnReset").click(function(event){
       event.preventDefault();
       $("form")[0].reset();
+      $("#returnRow").slideUp();
       $("#returnPar").text("");
       results = [];
-      $("#returnRow").hide();
+      
     });
   });
 });
