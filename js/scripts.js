@@ -1,5 +1,3 @@
-// Issues to Fix
-
 // Business Logic
 function containsThree (number) {
   let stringNumber = number.toString();
@@ -35,7 +33,7 @@ function beepBoop (number, name) {
   let result = [];
   if (isNaN(number)){ 
     alert("Please enter a number, and use digits rather than letters.");
-    return "";
+    return "Enter a number!";
   } else if (containsThree(number)) {
     return "Won't you be my neighbor, " + name + "?";
   } else if (containsTwo(number)) {
@@ -55,7 +53,7 @@ function beepBoopReverse (number, name) {
   let result = [];
   if (isNaN(number)){ 
     alert("Please enter a number, and use digits rather than letters.");
-    return "";
+    return "Enter a number!";
   } else if (containsThree(number)) {
     return "Won't you be my neighbor, " + name + "?";
   } else if (containsTwo(number)) {
