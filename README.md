@@ -35,6 +35,10 @@ Additionally, as more numbers are inputted, the program displays a list of all p
 * Input: "123"
 * Output: "Won't you be my neighbor?"
 
+6. Behavior: If the user selects to return numbers in decreasing order, the program returns a range of numbers beginning with the inputted number through 0.
+* Input: "5"
+* Output: "5, 4, 3, 2, 1, 0"
+
 ## Setup/Installation Requirements
 
 To View Project:
@@ -47,9 +51,6 @@ To Extend This Project:
 ## Known Bugs
 
 _There are no known bugs at this time._
-
-List of To-Do Items
-* Turn specifications in this document into a more appeasing table
 
 ## Technologies Used
 
