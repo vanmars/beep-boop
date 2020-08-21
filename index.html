@@ -12,29 +12,41 @@
 <body>
   <div class="container">
     <!-- Header -->
-    <div class="jumbotron shadow-lg mt-4">
+    <div class="jumbotron shadow-lg mt-4 text-center">
       <h2 class="display-3">Beep Boop Machine</h2>
       <hr>
-      <p class="lead">Welcome!</p>
+      <p class="lead"><span class="gray">Welcome! </span>Let me help you crunch some numbers.</p>
     </div>
-    <!-- Number Form -->
-    <div class="card shadow p-4 m-2 form">
-      <form id="numberForm">
-        <div class="form-group">
-          <label for="name">What's your name?</label>
-          <input id ="name" type="text" class="form-control">
+
+     <!-- Return Div -->
+     <div id="returnDiv" class="card shadow p-4 m-2 mt-4">
+      <div class="row">
+        <div class="col-lg-4">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSK8b98drEf1T4LoPUSo9DaS3Zpl-BGpoH-cw&usqp=CAU" alt="Cute robot" class="d-block mx-auto">
         </div>
-        <div class="form-group">
-          <label for="number">Please enter a number for the number machine!</label>
-          <input id ="number" type="text" class="form-control">
+        <div class="col-lg-8">
+          <p id= "returnPar" class="lead"></p>
         </div>
-        <button type="submit" class="btn btn-danger">Submit</button>
-      </form>
+      </div>
+
+      <!-- Number Form -->
+      <div class="card shadow p-4 m-2 form">
+        <form id="numberForm">
+          <div class="form-group">
+            <label for="name">What's your name?</label>
+            <input id ="name" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="number">What number would you like me to process?</label>
+            <input id ="number" type="text" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-danger d-block mx-auto mt-4">Submit</button>
+        </form>
+      </div>
     </div>
-    <!-- Return Div -->
-    <div id="returnDiv" class="card shadow p-4 m-2">
-      <p id= "returnPar" class="lead"></p>
-    </div>
+   
+      
+    
   </div>
 </body>
 </html>

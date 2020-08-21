@@ -4,16 +4,16 @@ body {
   background-image: url(https://c.pxhere.com/images/a8/0c/fc9bde02b45e9961d93b7142a653-1588233.jpg!d); 
 }
 
-#returnDiv {
-  display: none;
-}
-
 .container {
   width:70vw;
   margin: auto;
 }
 
-.jumbotron, .form {
+.jumbotron, .form, #returnDiv {
   background: rgb(174,238,238);
   background: radial-gradient(circle, rgba(174,238,238,1) 0%, rgba(148,187,233,1) 100%);
-} 
+}
+
+.gray {
+  color: gray;
+}

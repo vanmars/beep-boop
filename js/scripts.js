@@ -58,7 +58,6 @@ $(document).ready(function(){
     const nameInput = $("#name").val();
     const numberInput = Number($("#number").val());
     $("#returnPar").append(beepBoop(numberInput, nameInput)+ "  ");
-    $("#returnDiv").show();
   });
 });
 
