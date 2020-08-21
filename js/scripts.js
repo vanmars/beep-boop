@@ -26,6 +26,19 @@ function containsTwo (number) {
 console.log("containsTwo Test: "+ (containsTwo(12))); // true
 console.log("containsTwo Test: "+ (containsTwo(144))); // false
 
+function containsOne (number) {
+  let stringNumber = number.toString();
+  console.log(stringNumber);
+  for (num of stringNumber){
+    if (num === "1"){
+      return true;
+    };
+  };
+  return false;
+};
+console.log("containsOne Test: "+ (containsOne(531))); // true
+console.log("containsOne Test: "+ (containsOne(533))); // false
+
 
 function beepBoop (number) {
   let result = [];
