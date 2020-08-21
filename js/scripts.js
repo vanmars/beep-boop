@@ -77,13 +77,20 @@ $(document).ready(function(){
     const nameInput = $("#name").val();
     const numberInput = Number($("#number").val());
     const orderInput = parseInt($("#numOrder").val());
-
+    
+    //Check for name
+    if (nameInput === ""){
+      event.preventDefault();
+      alert('Your name is important! Pleaes enter it.');
+      return;
+    };
+    
     // Animation
     $(".form").animate({marginLeft: "+=5%", marginRight: "-=5%"}, 100);
     $(".form").animate({marginLeft: "-=5%", marginRight: "+=5%"}, 100);
     $(".form").animate({marginLeft: "+=5%", marginRight: "-=5%"}, 100);
     $(".form").animate({marginLeft: "-=5%", marginRight: "+=5%"}, 100);
-    
+   
     // Run beepBoop and beepBoopReverse and display results
     if (orderInput === 1){
       results.push(" ' " + beepBoop(numberInput, nameInput) + " ' ");
