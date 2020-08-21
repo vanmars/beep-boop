@@ -3,7 +3,7 @@
 // Business Logic
 function containsThree (number) {
   let stringNumber = number.toString();
-  for (num of stringNumber){
+  for (let num of stringNumber){
     if (num === "3"){
       return true;
     };
@@ -13,7 +13,7 @@ function containsThree (number) {
 
 function containsTwo (number) {
   let stringNumber = number.toString();
-  for (num of stringNumber){
+  for (let num of stringNumber){
     if (num === "2"){
       return true;
     };
@@ -23,7 +23,7 @@ function containsTwo (number) {
 
 function containsOne (number) {
   let stringNumber = number.toString();
-  for (num of stringNumber){
+  for (let num of stringNumber){
     if (num === "1"){
       return true;
     };
@@ -43,7 +43,27 @@ function beepBoop (number, name) {
   } else if (containsOne(number)) {
     return "Beep!";
   } else {
-    for (i=0; i<=number; i++){
+    for (let i=0; i<=number; i++){
+      result.push(i);
+    };
+    stringResult = result.join(", "); 
+    return stringResult;
+  };
+};
+
+function beepBoopReverse (number, name) {
+  let result = [];
+  if (isNaN(number)){ 
+    alert("Please enter a number, and use digits rather than letters.");
+    return "";
+  } else if (containsThree(number)) {
+    return "Won't you be my neighbor, " + name + "?";
+  } else if (containsTwo(number)) {
+    return "Boop!";
+  } else if (containsOne(number)) {
+    return "Beep!";
+  } else {
+    for (let i=number; i>=0; i--){
       result.push(i);
     };
     stringResult = result.join(", "); 
@@ -57,8 +77,13 @@ $(document).ready(function(){
     event.preventDefault();
     const nameInput = $("#name").val();
     const numberInput = Number($("#number").val());
-    $("#returnPar").append(beepBoop(numberInput, nameInput)+ "  ");
+    const orderInput = parseInt($("#numOrder").val());
     $("#returnHeading").show();
+    if (orderInput === 1){
+      $("#returnPar").append(beepBoop(numberInput, nameInput)+ "  ");
+    } else {
+      $("#returnPar").append(beepBoopReverse(numberInput, nameInput)+ "  ");
+    };
   });
 });
 
