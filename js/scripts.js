@@ -74,22 +74,15 @@ $(document).ready(function(){
   let results =[];
   $("form").submit(function(event){
     event.preventDefault();
-
-    // Animation
-    // $(".form").animate({marginLeft: "+=5%", marginRight: "+=5%"}, 100);
-    // $(".form").animate({marginLeft: "-=5%", marginRight: "-=5%"}, 100);
-    // $(".form").animate({marginLeft: "+=5%", marginRight: "+=5%"}, 100);
-    // $(".form").animate({marginLeft: "-=5%", marginRight: "-=5%"}, 100);
-
-    $(".form").animate({marginLeft: "+=5%", marginRight: "-=5%"}, 100);
-    $(".form").animate({marginLeft: "-=5%", marginRight: "+=5%"}, 100);
-    $(".form").animate({marginLeft: "+=5%", marginRight: "-=5%"}, 100);
-    $(".form").animate({marginLeft: "-=5%", marginRight: "+=5%"}, 100);
-
     const nameInput = $("#name").val();
     const numberInput = Number($("#number").val());
     const orderInput = parseInt($("#numOrder").val());
-    
+
+    // Animation
+    $(".form").animate({marginLeft: "+=5%", marginRight: "-=5%"}, 100);
+    $(".form").animate({marginLeft: "-=5%", marginRight: "+=5%"}, 100);
+    $(".form").animate({marginLeft: "+=5%", marginRight: "-=5%"}, 100);
+    $(".form").animate({marginLeft: "-=5%", marginRight: "+=5%"}, 100);
     
     // Run beepBoop and beepBoopReverse and display results
     if (orderInput === 1){
@@ -99,16 +92,15 @@ $(document).ready(function(){
       results.push(" ' " + beepBoopReverse(numberInput, nameInput) + " ' ");
       $("#returnPar").text(results);
     };
-    $("#returnRow").slideDown();
+    $("#returnRow").slideDown("1000");
 
     // Reset Button Functionality
     $("#btnReset").click(function(event){
       event.preventDefault();
       $("form")[0].reset();
-      $("#returnRow").slideUp();
+      $("#returnRow").slideUp("slow");
       $("#returnPar").text("");
-      results = [];
-      
+      results = []; 
     });
   });
 });
