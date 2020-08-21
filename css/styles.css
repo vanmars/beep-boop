@@ -1,0 +1,10 @@
+body { 
+  background-size: 300px;
+  background-repeat: repeat;
+  background-image: url(https://c.pxhere.com/images/a8/0c/fc9bde02b45e9961d93b7142a653-1588233.jpg!d); 
+}
+
+.container {
+  width:70vw;
+  margin: auto;
+}
