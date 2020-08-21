@@ -6,12 +6,13 @@
 
 ## Description
 
-This is a simple form that queries users for a number and returns a range of numbers from 0 to the user inputted number with the following exceptions:
+This is a simple form that queries users for a number and returns a range of numbers from 0 to the inputted number with the following exceptions:
 
 * Numbers that contain a 1: all digits are replaced (all digits) with "Beep!"
 * Numbers that contain a 2: all digits are replaced (all digits) with "Boop!"
 * Numbers that contain a 3: all digits are replaced (all digits) with "Won't you be my neighbor?"
 
+Additionally, as more numbers are inputted, the program displays a list of all previous values.
 
 ## Specifiations
 1. Behavior: The program returns a range of numbers from 0 to the user's inputted number.

@@ -34,7 +34,6 @@ function beepBoop (number) {
   if (isNaN(number)){ 
     alert("Please enter a number, and use digits rather than letters.");
     return;
-    // return "Please enter a number, and use digits rather than letters.";
   } else if (containsThree(number)) {
     return "Won't you be my neighbor?";
   } else if (containsTwo(number)) {
@@ -58,9 +57,6 @@ $(document).ready(function(){
     $("#returnPar").append(beepBoop(numberInput)+ "  ");
   });
 });
-
-
-
 
 /*
 // Tests
