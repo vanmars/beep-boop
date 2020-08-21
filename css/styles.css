@@ -9,7 +9,7 @@ body {
   margin: auto;
 }
 
-.jumbotron, .form, #returnDiv {
+.jumbotron, #returnDiv {
   background: rgb(174,238,238);
   background: radial-gradient(circle, rgba(174,238,238,1) 0%, rgba(148,187,233,1) 100%);
 }
@@ -20,6 +20,11 @@ body {
 
 .gray {
   color: gray;
+}
+
+.form {
+  background: rgb(153,4,18);
+  background: linear-gradient(0deg, rgba(153,4,18,1) 4%, rgba(200,51,66,1) 100%);
 }
 
 #returnRow {
