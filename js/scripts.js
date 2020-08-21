@@ -35,6 +35,8 @@ function beepBoop (number) {
   if (isNaN(number)){ 
     // alert("Please enter a number, and use digits rather than letters.");
     return "Please enter a number, and use digits rather than letters.";
+  } else if (containsThree(number)) {
+    return "Won't you be my neighbor?";
   } else if (containsTwo(number)) {
     return "Boop";
   } else if (containsOne(number)) {
@@ -73,5 +75,18 @@ function beepBoop (number) {
   console.log("Test 5: " + (beepBoop(123) === "Won't you be my neighbor?"));
   console.log("Expected: Won't you be my neighbor?")
   console.log("Returned: " + (beepBoop(123)));
+
+  // Test 6 - Check rule for numbers containing 3, supercedes rule for numbers containing 2, which supercedes rule for numbers containing 3
+  console.log("Test 6a: " + (beepBoop(123) === "Won't you be my neighbor?"));
+  console.log("Expected: Won't you be my neighbor?")
+  console.log("Returned: " + (beepBoop(123)));
+
+  console.log("Test 6b: " + (beepBoop(12) === "Boop"));
+  console.log("Expected: Boop")
+  console.log("Returned: " + (beepBoop(12)));
+
+  console.log("Test 6c: " + (beepBoop(13) === "Won't you be my neighbor?"));
+  console.log("Expected: Won't you be my neighbor?")
+  console.log("Returned: " + (beepBoop(13)));
 
 // User Interface Logic
