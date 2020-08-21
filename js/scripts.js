@@ -73,6 +73,7 @@ function beepBoopReverse (number, name) {
 
 // User Interface Logic
 $(document).ready(function(){
+  let results =[];
   $("form").submit(function(event){
     event.preventDefault();
     const nameInput = $("#name").val();
@@ -80,9 +81,11 @@ $(document).ready(function(){
     const orderInput = parseInt($("#numOrder").val());
     $("#returnHeading").show();
     if (orderInput === 1){
-      $("#returnPar").append(beepBoop(numberInput, nameInput)+ "  ");
+      results.push(" ' " + beepBoop(numberInput, nameInput) + " ' ");
+      $("#returnPar").text(results);
     } else {
-      $("#returnPar").append(beepBoopReverse(numberInput, nameInput)+ "  ");
+      results.push(" ' " + beepBoopReverse(numberInput, nameInput) + " ' ");
+      $("#returnPar").text(results);
     };
   });
 });
