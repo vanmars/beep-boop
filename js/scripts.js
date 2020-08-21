@@ -1,5 +1,4 @@
 // Issues to Fix
-//  When a user does not enter a number, undefined gets appended to the return. Instead, nothing should be appended.
 
 // Business Logic
 function containsThree (number) {
@@ -36,7 +35,7 @@ function beepBoop (number, name) {
   let result = [];
   if (isNaN(number)){ 
     alert("Please enter a number, and use digits rather than letters.");
-    return;
+    return "";
   } else if (containsThree(number)) {
     return "Won't you be my neighbor, " + name + "?";
   } else if (containsTwo(number)) {
@@ -57,7 +56,7 @@ $(document).ready(function(){
   $("#numberForm").submit(function(event){
     event.preventDefault();
     const nameInput = $("#name").val();
-    const numberInput = parseInt($("#number").val());
+    const numberInput = Number($("#number").val());
     $("#returnPar").append(beepBoop(numberInput, nameInput)+ "  ");
     $("#returnDiv").show();
   });
