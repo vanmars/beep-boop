@@ -10,5 +10,36 @@
   <title>Beep Boop Machine</title>
 </head>
 <body>
+  <div class="container">
+    <!-- Header -->
+    <div class="jumbotron shadow-lg">
+      <h2 class="display-3">Beep Boop Machine</h2>
+      <hr>
+      <p class="lead">Welcome!</p>
+    </div>
+    <!-- Number Form -->
+    <div class="card shadow p-4 m-2">
+      <form id="numberForm">
+        <div class="form-group">
+          <label for="number">Please enter a number:</label>
+          <input id ="number" type="text" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-secondary">Submit</button>
+      </form>
+    </div>
+    <!-- Name Form -->
+    <div class="card shadow p-4 m-2">
+      <form id="nameForm">
+        <div class="form-group">
+          <label for="name">Please enter your name:</label>
+          <input id ="name" type="text" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-secondary">Submit</button>
+      </form>
+    </div>
+    <!-- Return Div -->
+    <div id="returnDiv">
+    </div>
+  </div>
 </body>
 </html>
