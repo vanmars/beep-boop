@@ -77,8 +77,7 @@ $(document).ready(function(){
     const nameInput = $("#name").val();
     const numberInput = Number($("#number").val());
     const orderInput = parseInt($("#numOrder").val());
-    
-
+    // Run beepBoop and beepBoopReverse and display results
     if (orderInput === 1){
       results.push(" ' " + beepBoop(numberInput, nameInput) + " ' ");
       $("#returnPar").text(results);
@@ -86,9 +85,8 @@ $(document).ready(function(){
       results.push(" ' " + beepBoopReverse(numberInput, nameInput) + " ' ");
       $("#returnPar").text(results);
     };
-    
     $("#returnRow").show();
-
+    // Reset Button Functionality
     $("#btnReset").click(function(event){
       event.preventDefault();
       $("form")[0].reset();
@@ -96,10 +94,7 @@ $(document).ready(function(){
       results = [];
       $("#returnRow").hide();
     });
-
-
   });
- 
 });
 
 /*
@@ -129,16 +124,8 @@ $(document).ready(function(){
   console.log("Expected: Won't you be my neighbor?")
   console.log("Returned: " + (beepBoop(123)));
 
-  // Test 6 - Check rule for numbers containing 3, supercedes rule for numbers containing 2, which supercedes rule for numbers containing 3
-  console.log("Test 6a: " + (beepBoop(123) === "Won't you be my neighbor?"));
-  console.log("Expected: Won't you be my neighbor?")
-  console.log("Returned: " + (beepBoop(123)));
-
-  console.log("Test 6b: " + (beepBoop(12) === "Boop"));
-  console.log("Expected: Boop")
-  console.log("Returned: " + (beepBoop(12)));
-
-  console.log("Test 6c: " + (beepBoop(13) === "Won't you be my neighbor?"));
-  console.log("Expected: Won't you be my neighbor?")
-  console.log("Returned: " + (beepBoop(13)));
-*/
+  // Test 6 - If the user selects to return numbers in decreasing order, the program returns a range of numbers beginning with the inputted number through 0.
+  console.log("Test 6: " + (beepBoopReverse(5) === "5, 4, 3, 2, 1, 0"));
+  console.log("Expected: 5, 4, 3, 2, 1, 0");
+  console.log("Returned: " + (beepBoopReverse(5)));
+  */
