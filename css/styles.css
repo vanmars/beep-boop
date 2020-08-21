@@ -17,3 +17,7 @@ body {
 .gray {
   color: gray;
 }
+
+#returnHeading {
+  display: none;
+}
