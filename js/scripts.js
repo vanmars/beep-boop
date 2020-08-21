@@ -74,9 +74,18 @@ $(document).ready(function(){
   let results =[];
   $("form").submit(function(event){
     event.preventDefault();
+
+    // Animation
+    $(".form").animate({marginLeft: "+=5%", marginRight: "+=5%"}, 75);
+    $(".form").animate({marginLeft: "-=5%", marginRight: "-=5%"}, 75);
+    $(".form").animate({marginLeft: "+=5%", marginRight: "+=5%"}, 75);
+    $(".form").animate({marginLeft: "-=5%", marginRight: "-=5%"}, 75);
+
     const nameInput = $("#name").val();
     const numberInput = Number($("#number").val());
     const orderInput = parseInt($("#numOrder").val());
+    
+    
     // Run beepBoop and beepBoopReverse and display results
     if (orderInput === 1){
       results.push(" ' " + beepBoop(numberInput, nameInput) + " ' ");
@@ -86,6 +95,7 @@ $(document).ready(function(){
       $("#returnPar").text(results);
     };
     $("#returnRow").show();
+
     // Reset Button Functionality
     $("#btnReset").click(function(event){
       event.preventDefault();
