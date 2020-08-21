@@ -30,14 +30,13 @@ function containsOne (number) {
   return false;
 };
 
-
 function beepBoop (number) {
   let result = [];
   if (isNaN(number)){ 
   // alert("Please enter a number, and use digits rather than letters.");
   return "Please enter a number, and use digits rather than letters."
-  // } else if (containsThree(number)) {
-  //   return ""
+  } else if (containsOne(number)) {
+    return "Beep"
   } else {
     for (i=0; i<=number; i++){
       result.push(i);
