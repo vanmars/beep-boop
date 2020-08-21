@@ -1,9 +1,28 @@
 // Business Logic
+
+function containsThree (number) {
+  let stringNumber = number.toString();
+  console.log(stringNumber);
+  for (num of stringNumber){
+    if (num === "3"){
+      return true;
+    };
+  };
+  return false;
+};
+console.log("containsThree Test: "+ (containsThree(13))); // true
+console.log("containsThree Test: "+ (containsThree(245))); // false
+
+
 function beepBoop (number) {
   let result = [];
   if (isNaN(number)){ 
   // alert("Please enter a number, and use digits rather than letters.");
   return "Please enter a number, and use digits rather than letters."
+  // } else if () {
+
+
+
   } else {
     for (i=0; i<=number; i++){
       result.push(i);
