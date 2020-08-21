@@ -1,7 +1,16 @@
 // Business Logic
 function beepBoop (number) {
+  let result = [];
+  if (isNaN(number)){ 
   // alert("Please enter a number, and use digits rather than letters.");
-  return "Please enter a number, and use digits rather than letters.";
+  return "Please enter a number, and use digits rather than letters."
+  } else {
+    for (i=0; i<=number; i++){
+      result.push(i);
+    };
+    stringResult = result.join(", "); 
+    return stringResult;
+  };
 };
 
 // Tests
@@ -12,7 +21,7 @@ function beepBoop (number) {
 
   // Test 2 - Return range of numbers
   console.log("Test 2: " + (beepBoop(4) === "0, 1, 2, 3, 4"));
-  console.log("Expected: 0, 1, 2, 3, 4.")
+  console.log("Expected: 0, 1, 2, 3, 4")
   console.log("Returned: " + (beepBoop(4)));
 
   // Test 3 - Return 'Beep'
