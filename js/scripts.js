@@ -77,20 +77,11 @@ $(document).ready(function(){
     const nameInput = $("#name").val();
     const numberInput = Number($("#number").val());
     const orderInput = parseInt($("#numOrder").val());
-
-    //Check for Mame
-    if (nameInput === ""){
-      event.preventDefault();
-      alert('Your name is important! Pleaes enter it.');
-      return;
-    };
-
     // Animation
     $(".form").animate({marginLeft: "+=5%", marginRight: "-=5%"}, 100);
     $(".form").animate({marginLeft: "-=5%", marginRight: "+=5%"}, 100);
     $(".form").animate({marginLeft: "+=5%", marginRight: "-=5%"}, 100);
     $(".form").animate({marginLeft: "-=5%", marginRight: "+=5%"}, 100);
-
     // Run beepBoop and beepBoopReverse and display results
     if (orderInput === 1){
       results.push(" || " + beepBoop(numberInput, nameInput) + " || ");
@@ -100,7 +91,6 @@ $(document).ready(function(){
       $("#returnPar").text(results);
     };
     $("#returnRow").slideDown("1000");
-
     // Reset Button Functionality
     $("#btnReset").click(function(event){
       event.preventDefault();
