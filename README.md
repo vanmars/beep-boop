@@ -23,21 +23,22 @@ Additionally, as more numbers are inputted, the program displays a list of all p
 * Input: "4"
 * Output: "0, 1, 2, 3, 4"
 
-3. Behavior: If the user's inputted number contains a 1, the program returns "Beep!"
-* Input: "123"
-* Output: "Beep!"
+3. Behavior: If a number in the range of outputted numbers contains a 1, the program replaces that outputted number in the range with "Beep!"
+* Input: "4"
+* Output: "0, Beep!, 2, 3, 4"
 
 4. Behavior: If the user's inputted number contains a 2, the program returns "Boop!"
-* Input: "123"
-* Output: "Boop!"
+* Input: "4"
+* Output: "0, Beep!, Boop!, 3, 4"
 
 5. Behavior: If the user's inputted number contains a 3, the program returns "Won't you be my neighbor?"
-* Input: "123"
-* Output: "Won't you be my neighbor?"
+* Input: "4"
+* Output: "0, Beep!, Boop!, Won't you be my neighbor?, 4"
 
-6. Behavior: If the user selects to return numbers in decreasing order, the program returns a range of numbers beginning with the inputted number through 0.
-* Input: "5"
-* Output: "5, 4, 3, 2, 1, 0"
+6. Behavior: If the user selects to return numbers in decreasing order, the program returns a range of numbers 
+(that includes the exceptions above for numbers with 3, 2, and 1) beginning with the inputted number through 0.
+* Input: "4" "Decreasing"
+* Output: "4, Won't you be my neighbor?, Boop!, Beep!, 0"
 
 ## Setup/Installation Requirements
 
